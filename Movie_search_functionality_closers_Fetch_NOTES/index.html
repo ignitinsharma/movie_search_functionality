@@ -6,17 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotstar Search Functionality</title>
     <style>
-        #movies{
-            width: 180px;
-            height: 200px;
 
+
+
+        #movies{
+            width: 400px;
+            height: 300px;
+            display: flex;
             border: 1px solid black;
             overflow: scroll;
         }
+
+        #movies div{
+            width: 400px;
+            height: 30px;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+
+        }
+        #image{
+            max-width: auto;
+            max-height: auto;
+            
+        }
+
+        #movies div p{
+            margin-left: 20px;
+        }
+
+
+    
     </style>
 </head>
 <body>
-    <input oninput="main()" type="text" id="query">
+    <!-- debounce means if someone type faster then 1 sec so then bounce the 
+    api request if someone slow type take time more than one min then one second 
+    then fetch data every one sec letter  -->
+    
+    <input oninput="debounce(main,1000)" type="text" id="query">
     <div id="movies"></div>
     
 </body>
