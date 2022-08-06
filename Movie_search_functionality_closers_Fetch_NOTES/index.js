@@ -129,15 +129,17 @@ function newevent(el) {
   moviename.setAttribute("id", "moviename")
   moviename.innerText = `Movie Name =${el.Title}`;
 
-  let type = document.createElement("p");
-  moviename.setAttribute("id", "type")
-  type = innerText = `Type =${el.Type}`;
+  let type = document.createElement("h2");
+  type.setAttribute("id", "type")
+  type.innerText = `Type =${el.Type}`;
 
-  let year = document.createElement("p");
-  moviename.setAttribute("id", "moviename")
-  year = innerText = `Year =${el.Year}`;
+  // let tag=document.createElement("br")
+
+  let year = document.createElement("h2");
+  year.setAttribute("id", "moviename")
+  year.innerText = `Year =${el.Year}`;
 
   div_img.append(newimg);
-  div_text.append(moviename, type, year);
+  div_text.append(moviename, type,year);
   new_data.append(div_img,div_text);
 }

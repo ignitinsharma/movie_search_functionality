@@ -22,7 +22,8 @@
         #header {
             width: 100%;
             height: 90px;
-            background-color: black;
+            background: rgb(55, 33, 77);
+            background: linear-gradient(90deg, rgba(55, 33, 77, 1) 1%, rgba(1, 3, 11, 1) 42%);
             margin-bottom: 30px;
         }
 
@@ -59,7 +60,7 @@
             margin-bottom: 10px;
             background-color: aliceblue;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            
+
 
         }
 
@@ -68,7 +69,6 @@
             width: 390px;
             padding: 10px 0px 10px 10px;
             margin-bottom: 5px;
-
         }
 
         #image {
@@ -82,7 +82,7 @@
             margin-left: 20px;
         }
 
-        #new_data{
+        #new_data {
             margin-top: 20px;
             width: 80%;
             height: 500px;
@@ -92,30 +92,53 @@
             border-bottom-right-radius: 50px;
             margin-top: 40px;
             margin-bottom: 60px;
+            display: flex;
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
 
-        #div_img{
+        #div_img {
             width: 50%;
             height: 500px;
-            border: 2px solid green;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        #newimg{
+        #newimg {
             width: 90%;
             height: 90%;
             border-top-left-radius: 50px;
             border-bottom-right-radius: 50px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
         }
 
 
-        #div_text{
-            
+        #div_text {
+            width: 50%;
+            height: 500px;
+            text-align: center;
+            display: grid;
+            text-align: center;
+            margin-top: 50px;
+
+
         }
 
+        #moviename {
+            color: black;
+
+
+        }
+
+        #type {
+            color: black;
+
+        }
+
+        #year {
+            color: black;
+
+        }
     </style>
 </head>
 
@@ -133,9 +156,9 @@
 
         <input oninput="debounce(main,1000)" placeholder="Enter Movie name" type="text" id="query">
         <div id="movies"></div>
-        
+
         <div id="new_data">
-            <!-- data will appending here movie data -->
+            <!-- function newevent()d ata will appending here movie data -->
         </div>
     </div>
 </body>
