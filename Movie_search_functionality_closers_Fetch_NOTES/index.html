@@ -95,9 +95,27 @@
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
 
-        #newimg{
-
+        #div_img{
+            width: 50%;
+            height: 500px;
+            border: 2px solid green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        #newimg{
+            width: 90%;
+            height: 90%;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+
+        #div_text{
+            
+        }
+
     </style>
 </head>
 
@@ -117,15 +135,7 @@
         <div id="movies"></div>
         
         <div id="new_data">
-            <div id="newimg">
-                <img src="" id="newimg_img" alt="">
-            </div>
-           
-            <div id="newData_div">
-                <h2 id="moviename" ></h2>
-                <p id="type"></p>
-                <p id="year"></p>
-            </div>
+            <!-- data will appending here movie data -->
         </div>
     </div>
 </body>

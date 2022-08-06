@@ -106,30 +106,38 @@ function debounce(main, delay) {
 
 
 let new_data = document.getElementById("new_data");
-let newimg = document.getElementById("newimg");
-let newData_div = document.getElementById("newimg");
 
 
 //--> for when user click any movie in scroll bar then this function get called
 //--> then it shows the image in below slide
 
 function newevent(el) {
-  
-  new_data.innerHTML=''
-  let newimg_img = document.getElementById("newimg_img");
-  newimg.src = el.Poster;
-  console.log(el);
+  new_data.innerHTML=""
 
-  let moviename = document.getElementById("moviename");
+  let div_img=document.createElement('div')
+  div_img.setAttribute("id", "div_img");
+
+  let div_text=document.createElement('div')
+  div_text.setAttribute("id", "div_text");
+
+
+  let newimg = document.createElement("img");
+  newimg.setAttribute("id", "newimg")
+  newimg.src = el.Poster;
+
+  let moviename = document.createElement("h2");
+  moviename.setAttribute("id", "moviename")
   moviename.innerText = `Movie Name =${el.Title}`;
 
-  let type = document.getElementById("type");
+  let type = document.createElement("p");
+  moviename.setAttribute("id", "type")
   type = innerText = `Type =${el.Type}`;
 
-  let Year = document.getElementById("year");
-  Year = innerText = `Year =${el.Year}`;
+  let year = document.createElement("p");
+  moviename.setAttribute("id", "moviename")
+  year = innerText = `Year =${el.Year}`;
 
-  newimg.append(newimg_img);
-  newData_div.append(moviename, type, Year);
-  new_data.append(newimg,newData_div)
+  div_img.append(newimg);
+  div_text.append(moviename, type, year);
+  new_data.append(div_img,div_text);
 }
