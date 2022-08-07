@@ -18,7 +18,7 @@ async function main() {
       //--> so that is movie api and in last i have query means im checking query what user
       //--> entered in box so im passing that input to query and then api will check and give it me results..
 
-      `http://www.omdbapi.com/?apikey=e69f7110&s=${query}`
+      `https://www.omdbapi.com/?apikey=e69f7110&s=${query}`
     );
 
     //--> data come in readable stream so we have colllect and change using JSON()
